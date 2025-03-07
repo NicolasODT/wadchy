@@ -26,9 +26,9 @@ garantissant ainsi une performance optimale de la plateforme.`
 
 
 
-    const [openIndex, setOpenIndex] = useState(null);
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-    const toggleAccordion = (index) => {
+    const toggleAccordion = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
