@@ -1,8 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@400;500&display=swap');
 @import "tailwindcss";
+
+@tailwind utilities;
+body {
+  background-color: #0A1F2E;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+}
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+@keyframes twinkle {
+  0% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0); }
+}
+
+.luxury-glow {
+  background-image: linear-gradient(to right, #D2C7AE, #D2C7AE, #D97A54);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px rgba(210, 199, 174, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(210, 199, 174, 1);
+  }
 }
 
 @theme inline {
@@ -20,7 +54,141 @@
 }
 
 body {
-  background: var(--background);
+  background: #171717;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Animation de la bordure (rotateBorder) avec coins arrondis implicites */
+@keyframes rotateBorder {
+  0% {
+    border-image-source: linear-gradient(45deg, #D2C7AE, #D97A54, #808080);
+  }
+  25% {
+    border-image-source: linear-gradient(45deg, #D97A54, #808080, #D2C7AE);
+  }
+  50% {
+    border-image-source: linear-gradient(45deg, #808080, #D2C7AE, #D97A54);
+  }
+  75% {
+    border-image-source: linear-gradient(45deg, #D2C7AE, #D97A54, #808080);
+  }
+  100% {
+    border-image-source: linear-gradient(45deg, #D2C7AE, #D97A54, #808080);
+  }
+}
+
+/* Animation du texte (rotateTextGradient) */
+@keyframes rotateTextGradient {
+  0% {
+    background-image: linear-gradient(45deg, #D2C7AE, #D97A54, #808080);
+  }
+  25% {
+    background-image: linear-gradient(45deg, #D97A54, #808080, #D2C7AE);
+  }
+  50% {
+    background-image: linear-gradient(45deg, #808080, #D2C7AE, #D97A54);
+  }
+  75% {
+    background-image: linear-gradient(45deg, #D2C7AE, #D97A54, #808080);
+  }
+  100% {
+    background-image: linear-gradient(45deg, #D2C7AE, #D97A54, #808080);
+  }
+}
+
+/* Animation de l'horloge (rotateClockGradient) */
+@keyframes rotateClockGradient {
+  0% {
+    background-image: linear-gradient(45deg, #D2C7AE, #D97A54, #808080);
+  }
+  25% {
+    background-image: linear-gradient(45deg, #D97A54, #808080, #D2C7AE);
+  }
+  50% {
+    background-image: linear-gradient(45deg, #808080, #D2C7AE, #D97A54);
+  }
+  75% {
+    background-image: linear-gradient(45deg, #D2C7AE, #D97A54, #808080);
+  }
+  100% {
+    background-image: linear-gradient(45deg, #D2C7AE, #D97A54, #808080);
+  }
+}
+
+.luxury-carousel {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-container {
+  display: flex;
+  height: 100%;
+}
+
+.carousel-slide {
+  position: relative;
+  flex: 0 0 100%; /* Mobile: 1 slide */
+  height: 100%;
+  padding: 0 1rem;
+  transform: translateZ(0); /* Optimisation GPU */
+}
+
+@media (min-width: 768px) {
+  .carousel-slide {
+    flex: 0 0 50%; /* Tablette: 2 slides */
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-slide {
+    flex: 0 0 33.33%; /* Desktop: 3 slides */
+  }
+}
+
+/* Supprimer les contours */
+.carousel-slide > div {
+  border: none;
+  border-radius: 0;
+}
+@layer utilities {
+  .bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+/* Animation pour les particules */
+@keyframes twinkle {
+  0% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0); }
+}
+
+/* Halo lumineux pour le texte */
+.luxury-glow {
+  background-image: linear-gradient(to right, #D2C7AE, #D2C7AE, #D97A54);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 10px rgba(210, 199, 174, 0.5); }
+  100% { text-shadow: 0 0 20px rgba(210, 199, 174, 1); }
+}
+
+/* S'assurer que l'overlay ne bloque pas les interactions */
+.bg-gradient-to-b {
+  pointer-events: none;
 }
