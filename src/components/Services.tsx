@@ -56,10 +56,6 @@ const LuxuryCarousel: React.FC<CarouselProps> = ({ slides = DEFAULT_SLIDES }) =>
         }
     }, [currentIndex, slides, visibleSlides.length]);
 
-    // Navigation manuelle
-    const scrollPrev = () => setCurrentIndex((prev) => Math.max(prev - 1, 0));
-    const scrollNext = () => setCurrentIndex((prev) => prev + 1);
-
     return (
         <div className="luxury-carousel bg-0A1F2E py-16 relative overflow-hidden">
             <motion.div
@@ -126,27 +122,8 @@ const LuxuryCarousel: React.FC<CarouselProps> = ({ slides = DEFAULT_SLIDES }) =>
                 </motion.div>
             </div>
 
-            {/* Boutons de navigation */}
-            <motion.button
-                onClick={scrollPrev}
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-D97A54/80 p-3 rounded-full z-20"
-                whileHover={{ scale: 1.1, boxShadow: '0 0 15px rgba(217, 122, 84, 0.7)' }}
-                transition={{ duration: 0.3 }}
-            >
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-                </svg>
-            </motion.button>
-            <motion.button
-                onClick={scrollNext}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-D97A54/80 p-3 rounded-full z-20"
-                whileHover={{ scale: 1.1, boxShadow: '0 0 15px rgba(217, 122, 84, 0.7)' }}
-                transition={{ duration: 0.3 }}
-            >
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                </svg>
-            </motion.button>
+
+
         </div>
     );
 };
