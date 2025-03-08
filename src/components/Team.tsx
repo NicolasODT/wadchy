@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaChevronRight, FaGavel } from 'react-icons/fa';
+import { FaChevronRight } from 'react-icons/fa';
 
 const TeamSection = () => {
     const teamMembers = [
