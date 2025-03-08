@@ -5,6 +5,9 @@ import Pricing from '../components/Pricing';
 import Contact from '../components/Contact';
 import BurgerNav from '../components/BurgerNav';
 import Footer from '../components/Footer';
+import LuxuryModelsPromo from '../components/LuxuryModelsPromo'
+
+
 
 export default function Home() {
     return (
@@ -13,6 +16,7 @@ export default function Home() {
             <Header />
             <Pricing />
             <Services />
+            <LuxuryModelsPromo />
             <Team />
 
             <Contact />
