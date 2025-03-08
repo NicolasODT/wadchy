@@ -102,7 +102,7 @@ export default function ServicesTimeline() {
                             </p>
 
                             {/* Description détaillée */}
-                            <div className="font-montserrat text-gray-300 leading-relaxed space-y-2 text-sm md:text-base">
+                            <div className="font-montserrat text-white space-y-2 text-sm md:text-base">
                                 {service.description.split('\n').map((line, i) => (
                                     <p
                                         key={i}
