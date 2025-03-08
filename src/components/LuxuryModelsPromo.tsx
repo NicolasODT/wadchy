@@ -248,7 +248,7 @@ export default function Home() {
                         </motion.p>
                         <ul className="list-disc list-inside mt-2 text-sm md:text-base text-white/90">
                             <li><strong>Une bannière</strong> qui sublime votre nom ou image.</li>
-                            <li><strong>Des boutons</strong> pour vos réseaux, avec des effets premium (comme le diamant sur OnlyFans).</li>
+                            <li><strong>Des boutons</strong> pour vos réseaux, avec des effets premium.</li>
                         </ul>
                         <motion.p
                             className="text-sm md:text-base leading-relaxed mt-4 text-white/90"
