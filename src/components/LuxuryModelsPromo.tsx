@@ -188,7 +188,7 @@ export default function Home() {
                     >
                         {/* Bannière */}
                         <motion.div ref={ref} style={{ y }} className="relative w-full h-64 overflow-hidden rounded-t-lg">
-                            <Image src="/img/16.png" alt="Bannière stylée" fill className="object-cover" priority />
+                            <Image src="/img/16.jpg" alt="Bannière stylée" fill className="object-cover" priority />
                             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent pointer-events-none" />
                             <motion.h1
                                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/8 text-2xl md:text-3xl font-cinzel text-center text-transparent bg-clip-text animate-[gradientFlow_6s_infinite_linear]"
