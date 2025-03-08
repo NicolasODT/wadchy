@@ -102,36 +102,6 @@ const SocialButton: React.FC<SocialButtonProps> = ({ href, label, icon: Icon, is
                 />
             )}
 
-            {/* Diamant Flottant pour OnlyFans */}
-            {isPremium && (
-                <motion.span
-                    className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full z-[2]"
-                    animate={{ y: [-5, 0, -5], opacity: [0.9, 1, 0.9] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                >
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 4L18 10H6L12 4ZM6 10L2 16H22L18 10H6ZM2 16L12 22L22 16H2Z"
-                            fill="url(#diamondGradient)"
-                            stroke="rgba(255, 255, 255, 0.8)"
-                            strokeWidth="1.5"
-                        />
-                        <defs>
-                            <linearGradient id="diamondGradient" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0%" stopColor="#FFFFFF" />
-                                <stop offset="50%" stopColor="#F0F8FF" />
-                                <stop offset="100%" stopColor="#D3D3D3" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                    <motion.span
-                        className="absolute top-2 left-2 w-2 h-2 bg-white rounded-full"
-                        animate={{ opacity: [0, 1, 0], scale: [0, 1.5, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity, delay: 0.5, ease: "easeInOut" }}
-                    />
-                </motion.span>
-            )}
-
             {/* Contenu du Bouton */}
             <span
                 className={clsx(
