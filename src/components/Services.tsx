@@ -14,10 +14,10 @@ interface CarouselProps {
 }
 
 const DEFAULT_SLIDES: Slide[] = [
-    { image: '/img/1.png', title: 'Stratégie de Contenu', description: 'Contenu captivant pour capturer votre audience.' },
-    { image: '/img/2.png', title: 'Réseaux Sociaux', description: 'Boostez votre présence avec une gestion experte.' },
-    { image: '/img/3.png', title: 'Branding', description: 'Une identité unique qui marque les esprits.' },
-    { image: '/img/4.png', title: 'Gestion Premium', description: 'Maximisez vos revenus avec élégance.' },
+    { image: '/img/1.jpg', title: 'Stratégie de Contenu', description: 'Contenu captivant pour capturer votre audience.' },
+    { image: '/img/2.jpg', title: 'Réseaux Sociaux', description: 'Boostez votre présence avec une gestion experte.' },
+    { image: '/img/3.jpg', title: 'Branding', description: 'Une identité unique qui marque les esprits.' },
+    { image: '/img/4.jpg', title: 'Gestion Premium', description: 'Maximisez vos revenus avec élégance.' },
 ];
 
 const LuxuryCarousel: React.FC<CarouselProps> = ({ slides = DEFAULT_SLIDES }) => {

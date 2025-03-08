@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import Buttons from './Buttons';
 import Image from 'next/image';
 
-const backgroundImages = Array.from({ length: 18 }, (_, i) => `/img/${i + 1}.png`);
+const backgroundImages = Array.from({ length: 18 }, (_, i) => `/img/${i + 1}.jpg`);
 
 export default function Header() {
     const [currentImages, setCurrentImages] = useState<string[]>([]);
