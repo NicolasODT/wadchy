@@ -177,7 +177,7 @@ export default function Home() {
             </Head>
             <div className="min-h-screen  text-white font-montserrat overflow-hidden relative flex items-center justify-center p-4">
                 {/* Conteneur Flex pour Carte + Explication */}
-                <div className="w-full max-w-4xl flex flex-col md:flex-row items-center justify-between gap-8">
+                <div className="w-full max-w-4xl flex flex-col-reverse md:flex-row items-center justify-between gap-8">
                     {/* Carte à Gauche */}
                     <motion.div
                         className="w-full md:w-1/2 max-w-md bg-gradient-to-b from-background/90 to-background/70 rounded-lg shadow-lg border border-[#D2C7AE] relative overflow-hidden"
