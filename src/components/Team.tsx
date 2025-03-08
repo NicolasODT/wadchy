@@ -124,7 +124,7 @@ garantissant ainsi une performance optimale de la plateforme.`
                     className="mt-20 text-center border-t border-D2C7AE/20 pt-10"
                 >
                     <div className="flex items-center justify-center space-x-4">
-                        <FaGavel className="text-D97A54 text-2xl" />
+
                         <p
                             className="font-montserrat text-lg"
                             style={{
@@ -133,8 +133,7 @@ garantissant ainsi une performance optimale de la plateforme.`
                                 color: 'white'
                             }}
                         >
-                            Toutes nos collaborations sont protégées par des contrats notariés<br />
-                            rédigés par un expert en droit numérique (Barreau de Paris)
+                            Toutes nos collaborations sont régies par des contrats validés par un professionnel du droit, conformément au Code civil (article 1108) et à la législation française. Tout litige éventuel sera soumis aux tribunaux compétents.
                         </p>
                     </div>
                 </motion.div>
